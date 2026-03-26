@@ -292,24 +292,29 @@
           map(hand.keypoints[b].x, 0, 640, 0, width) + gx, map(hand.keypoints[b].y, 0, 480, 0, height) + gy);
       }
 
-      // Draw each keypoint with unique color and larger size
-      colorMode(HSL, 255);
+      // Draw each keypoint with explicit vibrant colors and massive size
+      let vColors = [
+        '#FF0000', '#FF5500', '#FFAA00', '#FFFF00', '#AAFF00',
+        '#00FF00', '#00FFAA', '#00FFFF', '#00AAFF', '#0055FF',
+        '#0000FF', '#5500FF', '#AA00FF', '#FF00FF', '#FF00AA',
+        '#FF0055', '#FF3333', '#33FF33', '#3333FF', '#FFFF33',
+        '#FF33FF'
+      ];
+
       for (let j = 0; j < hand.keypoints.length; j++) {
         let k = hand.keypoints[j];
         let x = map(k.x, 0, 640, 0, width) + gx;
         let y = map(k.y, 0, 480, 0, height) + gy;
 
-        let hueVal = map(j, 0, 20, 0, 255);
-        fill(hueVal, 255, 128);
-        stroke(255, 150);
-        strokeWeight(2);
-        circle(x, y, 16); // 每個座標點放大
+        fill(vColors[j % vColors.length]);
+        stroke(255, 200);
+        strokeWeight(3);
+        circle(x, y, 26); // 點位更進一步放大
 
         fill(255);
         noStroke();
-        circle(x, y, 4); // 中心白色亮點
+        circle(x, y, 8); // 中心的高光亮點也同步放大
       }
-      colorMode(RGB, 255);
     }
 
     function drawFingertips(hand, gx, gy) {
