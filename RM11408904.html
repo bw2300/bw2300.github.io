@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡健康與產業研究報告 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0c1b3',
+                            400: '#d9a38f',
+                            500: '#c67052',
+                            600: '#b45c43',
+                            700: '#964b36',
+                            800: '#7a3e2e',
+                            900: '#653529',
+                            950: '#361a14',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f0a09;
+            color: #eaddd7;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(40, 25, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(224, 193, 179, 0.1);
+            border-radius: 24px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #e0c1b3 0%, #c67052 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-item {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: rgba(198, 112, 82, 0.4);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #7a3e2e;
+            border-radius: 10px;
+        }
+        video {
+            box-shadow: 0 0 50px rgba(198, 112, 82, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans leading-relaxed">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-coffee-900/30 rounded-full blur-[120px] animate-float"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-coffee-700/20 rounded-full blur-[120px] animate-float" style="animation-delay: -3s"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto animate-fade-in-up">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-coffee-800/50 text-coffee-300 rounded-full border border-coffee-700/50">
+                Scientific Research Report 2026
+            </span>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold mb-6 tracking-tight">
+                咖啡的<span class="gradient-text">機能性革命</span>
+            </h1>
+            <p class="text-lg md:text-xl text-coffee-200/80 max-w-2xl mx-auto font-light leading-relaxed">
+                探討從生物活性化合物到全球市場趨勢，深度解析咖啡如何成為守護健康的新世代機能性飲品。
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-24 pb-24">
+        
+        <!-- 1. Infographic Section (TOP) -->
+        <section class="animate-fade-in-up" style="animation-delay: 0.2s">
+            <div class="flex flex-col items-center">
+                <div class="mb-10 text-center">
+                    <h2 class="text-3xl font-display font-bold mb-2">深度數據圖解</h2>
+                    <div class="h-1 w-20 bg-coffee-500 mx-auto rounded-full"></div>
+                </div>
+                <div class="w-full glass-card overflow-hidden p-2 md:p-4 group">
+                    <img src='https://opal.google/board/blobs/0c4285ef-0c83-4392-addb-7f04c731a444' alt='咖啡健康與產業資訊圖表' class="w-full h-auto rounded-xl shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]" />
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Video & Summary Section (CENTER) -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Video & Audio Player -->
+            <div class="lg:col-span-7 space-y-6 animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="glass-card p-4 overflow-hidden relative group">
+                    <div class="absolute top-4 left-4 z-20 px-3 py-1 bg-black/60 backdrop-blur-md rounded-lg text-xs font-semibold text-coffee-100 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                        主題摘要影片
+                    </div>
+                    <video 
+                        src='https://opal.google/board/blobs/cc283eee-8617-4eae-bd33-ea838885aed0' 
+                        alt='咖啡趨勢短影片' 
+                        class="w-full aspect-video object-cover rounded-xl"
+                        controls
+                        muted
+                        autoplay
+                        loop
+                    ></video>
+                </div>
+                
+                <div class="glass-card p-6 flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-coffee-800 rounded-full flex items-center justify-center text-coffee-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex-grow w-full">
+                        <p class="text-sm font-semibold text-coffee-300 mb-2">配樂推薦：沉浸式閱讀氛圍</p>
+                        <audio src='https://opal.google/board/blobs/38d94473-ec9f-4b7a-8b5a-0224d43263f8' alt='背景音樂' class="w-full opacity-80 hover:opacity-100 transition-opacity" controls></audio>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento List Summary -->
+            <div class="lg:col-span-5 space-y-4 animate-fade-in-up" style="animation-delay: 0.5s">
+                <div class="bento-item glass-card p-6 border-l-4 border-coffee-500">
+                    <h3 class="text-coffee-400 text-sm font-bold uppercase tracking-widest mb-3">Health Benefits</h3>
+                    <p class="text-coffee-100 font-medium">每日 3-5 杯可顯著降低全因死亡率，並對抗心血管與糖尿病風險。</p>
+                </div>
+                <div class="bento-item glass-card p-6">
+                    <h3 class="text-coffee-400 text-sm font-bold uppercase tracking-widest mb-3">Core Compounds</h3>
+                    <p class="text-coffee-100 font-medium">咖啡因與綠原酸具備強大的抗氧化與抗發炎能力，調節代謝平衡。</p>
+                </div>
+                <div class="bento-item glass-card p-6">
+                    <h3 class="text-coffee-400 text-sm font-bold uppercase tracking-widest mb-3">2026 Discovery</h3>
+                    <p class="text-coffee-100 font-medium">大型研究證實每天 2-3 杯咖啡可降低失智風險達 18%，清晨飲用效果更佳。</p>
+                </div>
+                <div class="bento-item glass-card p-6 bg-coffee-500/10 border-coffee-500/30">
+                    <h3 class="text-coffee-400 text-sm font-bold uppercase tracking-widest mb-3">Industry Trends</h3>
+                    <p class="text-coffee-100 font-medium">RTD 即飲與機能性咖啡成為主流；羅布斯塔豆因應氣候變遷需求激增。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Full Report Section (BOTTOM) -->
+        <section class="animate-fade-in-up" style="animation-delay: 0.6s">
+            <div class="glass-card p-8 md:p-16 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                    <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20,3H4v10c0,2.21,1.79,4,4,4h6c2.21,0,4-1.79,4-4v-3h2c1.1,0,2-0.9,2-2V5C22,3.9,21.1,3,20,3z M20,8h-2V5h2V8z M4,19h16v2H4V19z"/>
+                    </svg>
+                </div>
+                
+                <div class="max-w-3xl mx-auto prose prose-invert prose-coffee lg:prose-xl">
+                    <h2 class="text-3xl font-display font-bold mb-10 text-white border-b border-coffee-800 pb-6">專題報告內文</h2>
+                    
+                    <div class="space-y-12">
+                        <article>
+                            <h3 class="text-coffee-300 font-bold text-xl mb-4 flex items-center gap-3">
+                                <span class="bg-coffee-700 text-coffee-100 w-8 h-8 rounded-full flex items-center justify-center text-sm">一</span>
+                                咖啡的特性與核心成分
+                            </h3>
+                            <p class="text-coffee-200/90 leading-relaxed text-justify">
+                                咖啡是全球最廣泛消費的飲品之一。近年科學界逐漸將咖啡視為一種「<span class="text-coffee-100 font-semibold underline decoration-coffee-600">機能性食品 (Functional food)</span>」。根據2025年《Frontiers in Nutrition》的文獻回顧，咖啡的健康效益主要源自其豐富的生物活性化合物 (Bioactive compounds)，其中最核心的成分包括咖啡因與綠原酸。這些成分能在人體內發揮神經保護 (Neuroprotection)、代謝調節 (Metabolic regulation)、抗氧化與抗發炎等多重作用。
+                            </p>
+                        </article>
+
+                        <article>
+                            <h3 class="text-coffee-300 font-bold text-xl mb-4 flex items-center gap-3">
+                                <span class="bg-coffee-700 text-coffee-100 w-8 h-8 rounded-full flex items-center justify-center text-sm">二</span>
+                                健康影響與最新研究發現
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="pl-4 border-l-2 border-coffee-800">
+                                    <h4 class="text-white font-semibold mb-2">1. 降低疾病風險與延長壽命</h4>
+                                    <p class="text-coffee-200/90">每日飲用3至5杯咖啡的成年人，其全因死亡率顯著降低。2025年《歐洲心臟雜誌》研究指出，在早晨飲用咖啡，能將總死亡風險降低約16%。</p>
+                                </div>
+                                <div class="pl-4 border-l-2 border-coffee-800">
+                                    <h4 class="text-white font-semibold mb-2">2. 大腦保護與抗衰老</h4>
+                                    <p class="text-coffee-200/90">2026年《JAMA》一項長達43年、追蹤逾13萬人的大型研究發現，每天飲用2至3杯咖啡，能降低失智症發病風險約18%。</p>
+                                </div>
+                                <div class="pl-4 border-l-2 border-coffee-800">
+                                    <h4 class="text-white font-semibold mb-2">3. 飲用限制與副作用</h4>
+                                    <p class="text-coffee-200/90">過多的糖或奶油會抵銷健康價值。對咖啡敏感者或孕婦，每日咖啡因攝取量不宜超過200毫克，以避免焦慮或睡眠障礙。</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h3 class="text-coffee-300 font-bold text-xl mb-4 flex items-center gap-3">
+                                <span class="bg-coffee-700 text-coffee-100 w-8 h-8 rounded-full flex items-center justify-center text-sm">三</span>
+                                全球產業趨勢
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-coffee-950/40 p-6 rounded-2xl">
+                                    <h4 class="text-white font-semibold mb-3">機能性飲品崛起</h4>
+                                    <p class="text-sm text-coffee-200/80">2026年結合蛋白質或適應原的機能性咖啡正快速增長。RTD 咖啡亦朝向高端精品化發展。</p>
+                                </div>
+                                <div class="bg-coffee-950/40 p-6 rounded-2xl">
+                                    <h4 class="text-white font-semibold mb-3">氣候變遷農業衝擊</h4>
+                                    <p class="text-sm text-coffee-200/80">巴西面臨氣候挑戰。耐熱能力佳的羅布斯塔 (Robusta) 豆市場占比正在逐漸增加。</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <div class="bg-gradient-to-r from-coffee-900/50 to-transparent p-8 rounded-3xl border border-coffee-800/50 mt-16">
+                            <h3 class="text-coffee-300 font-bold text-xl mb-4">簡要結論</h3>
+                            <p class="text-coffee-100/90 italic font-light">
+                                「咖啡已從單純的提神飲品，轉變為具備高度健康價值的機能性飲品。受惠於健康意識提升與產品創新，咖啡產業在挑戰中展現出強韌的增長動能。」
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- References -->
+                    <div class="mt-20 pt-10 border-t border-coffee-900">
+                        <h4 class="text-sm font-bold text-coffee-500 uppercase tracking-widest mb-6">引用文獻來源</h4>
+                        <ol class="text-xs text-coffee-400/70 space-y-2 list-decimal list-inside">
+                            <li>Emadi, R. C., & Kamangar, F. (2025). Coffee's Impact on Health and Well-Being. Nutrients.</li>
+                            <li>Frontiers in Nutrition (2025). Transforming coffee from an empirical beverage.</li>
+                            <li>JAMA / 聯合新聞網 (2026). 喝咖啡不只提神醫曝43年研究關鍵數據.</li>
+                            <li>European Heart Journal / 康健雜誌 (2026). 每天喝咖啡更長壽？研究：死亡風險降16%.</li>
+                            <li>Grand View Research (2025). Coffee Market Size, Share & Trends Industry Report, 2033.</li>
+                            <li>Java City (2026). 2026 Coffee Trends.</li>
+                            <li>Foodcom (2025). Global Report: Coffee Market Overview 2026.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Footer Wrapper -->
+        <footer class="flex flex-col items-center justify-center pt-10 border-t border-coffee-900/30">
+            <div class="text-center space-y-2">
+                <p class="text-coffee-300 font-medium tracking-widest">
+                    【主題探索報告】by <span class="text-red-500 italic font-bold">RUBY</span>
+                </p>
+                <p class="text-coffee-600 text-sm font-mono tracking-tighter">
+                    STUDENT ID: M11408904
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scroll to top subtle indicator -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-12 h-12 glass-card flex items-center justify-center text-coffee-300 hover:text-white hover:bg-coffee-700/50 transition-all shadow-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+        </button>
+    </div>
+
+</body>
+</html>
