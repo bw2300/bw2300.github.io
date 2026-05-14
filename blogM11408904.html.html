@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市脈動：台北捷運的進化旅程</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Zhi+Mang+Xing&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ghibli: {
+                            sky: '#87CEEB',
+                            grass: '#567d46',
+                            cloud: '#fdfcf0',
+                            accent: '#e67e22',
+                            deepBlue: '#1a3a5f',
+                            paper: '#f9f5e8',
+                            mrtBlue: '#0070bd',
+                            mrtBrown: '#996633'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Zhi Mang+Xing', 'cursive'],
+                        accent: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'sway': 'sway 8s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        sway: {
+                            '0%, 100%': { transform: 'rotate(-1deg)' },
+                            '50%': { transform: 'rotate(1deg)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f9f5e8;
+            background-image: radial-gradient(#e5e0d0 1px, transparent 1px);
+            background-size: 40px 40px;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .ghibli-border {
+            border: 3px solid #4a3728;
+            border-radius: 2px;
+            position: relative;
+        }
+        .ghibli-border::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid #4a3728;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .mrt-line-blue { border-left: 6px solid #0070bd; }
+        .mrt-line-red { border-left: 6px solid #e3002c; }
+        .mrt-line-green { border-left: 6px solid #008659; }
+        .mrt-line-orange { border-left: 6px solid #f8b61c; }
+        .mrt-line-brown { border-left: 6px solid #996633; }
+        .mrt-line-yellow { border-left: 6px solid #ffdb00; }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="text-slate-800 font-sans leading-relaxed overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden px-4 py-20">
+        <!-- Floating Elements -->
+        <div class="absolute top-10 left-10 w-24 h-24 bg-ghibli-sky/20 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-ghibli-grass/10 rounded-full blur-3xl animate-sway"></div>
+
+        <div class="z-10 text-center max-w-4xl mx-auto">
+            <span class="inline-block px-4 py-1 mb-6 text-sm font-bold tracking-widest uppercase bg-ghibli-accent text-white rounded-full animate-fade-in-up">
+                M11408904 • 城市觀察日記
+            </span>
+            <h1 class="text-5xl md:text-7xl font-display text-ghibli-deepBlue mb-8 leading-tight drop-shadow-sm animate-fade-in-up" style="animation-delay: 0.2s">
+                城市重心：穿越綠意的<br><span class="text-ghibli-mrtBlue">台北捷運</span>時光
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-light animate-fade-in-up" style="animation-delay: 0.4s">
+                結合現代便捷與吉普力式的溫馨，探索那條連接著夢想與日常的軌道。
+            </p>
+        </div>
+
+        <!-- Banner Images with Ghibli Vibe -->
+        <div class="mt-16 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 px-4 animate-fade-in-up" style="animation-delay: 0.6s">
+            <div class="ghibli-border overflow-hidden group">
+                <div class="image-container">
+                    <img src='https://opal.google/board/blobs/5d76c495-dc97-42e4-8551-0c8ada6af593' alt='台北捷運穿梭於城市綠意間' class="rounded-sm" />
+                </div>
+            </div>
+            <div class="ghibli-border overflow-hidden group">
+                <div class="image-container">
+                    <img src='https://opal.google/board/blobs/30beb05b-80f1-497e-b552-65aa786e7c06' alt='祥雲下的捷運列車' class="rounded-sm" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 text-center text-ghibli-deepBlue/60 italic text-sm font-medium animate-fade-in-up" style="animation-delay: 0.8s">
+            * 插畫結合了台北捷運的現代感與吉普力式的溫馨筆觸，完美契合「城市重心」的主題。
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Section 1 -->
+        <article class="mb-24 relative">
+            <div class="flex items-baseline gap-4 mb-8">
+                <span class="text-6xl font-accent font-extrabold text-ghibli-mrtBlue/20">01</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-ghibli-deepBlue">台北人的最強「雙腳」！</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-12 glass-card p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold mb-4 text-ghibli-accent">捷運不只是交通工具，更是生活重心</h3>
+                    <div class="space-y-4 text-lg text-slate-700 text-justify">
+                        <p>在大台北地區生活，你可以沒有車，但絕對不能沒有那張悠遊卡。這位每天載著 <span class="font-bold text-ghibli-mrtBlue">200 萬人次</span>穿梭、橫跨雙北的「超級守護神」，早已超越了交通工具的範疇，演變成這座城市的生命線。</p>
+                        <p>目前台北捷運擁有 <span class="bg-blue-100 px-2 rounded">6 條路線</span>、<span class="bg-blue-100 px-2 rounded">131 個車站</span>，這個龐大的網絡就像是城市的血管。有趣的是，如果你觀察房價或商圈的興衰，會發現北捷實踐了所謂的 <strong class="text-ghibli-deepBlue">TOD（Transit-Oriented Development，大眾運輸導向型發展）</strong> 概念。</p>
+                        <p class="border-l-4 border-ghibli-grass pl-4 italic bg-ghibli-grass/5 py-2">
+                            簡單來說，捷運站開到哪，繁榮就跟到哪。車站不再只是上下車的地點，而是城市發展的「心臟」，帶動了周邊的居住、辦公與休閒機能。
+                        </p>
+                        <p>更重要的是，搭捷運這件事，其實是一場無聲的環保運動。在淨零排放的浪潮下，北捷成了最簡單的減碳實踐，不僅救了地球，對於口袋不深的通勤族來說，更是救了荷包的救星。</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Section 2 - Bento Layout -->
+        <article class="mb-24">
+            <div class="flex items-baseline gap-4 mb-8">
+                <span class="text-6xl font-accent font-extrabold text-ghibli-mrtBrown/20">02</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-ghibli-deepBlue">穿越時空的鐵軌</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-8 rounded-3xl mrt-line-brown">
+                    <h4 class="text-sm font-bold text-ghibli-mrtBrown mb-2 tracking-widest">1996 - 木柵線通車</h4>
+                    <p class="text-slate-700">回想起 1990 年代的台北，那是一段被戲稱為「交通黑暗期」的歲月。直到 1996 年 3 月 28 日，台灣第一條捷運「木柵線」正式通車，全城轟動。雖然當時有人嘲笑那是「都市玩具」，但從那一刻起，台北正式與國際大都市接軌。</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl mrt-line-blue">
+                    <h4 class="text-sm font-bold text-ghibli-mrtBlue mb-2 tracking-widest">2014 - 五大路網成形</h4>
+                    <p class="text-slate-700">北捷經歷了從「一條線」到「一張網」的進化。2014 年松山線通車，正式宣告「五大路網」成形，同色線路不交叉的模式，讓轉乘變得像呼吸一樣自然。</p>
+                </div>
+                <div class="md:col-span-2 glass-card p-8 rounded-3xl mrt-line-yellow bg-yellow-50/30">
+                    <h4 class="text-sm font-bold text-yellow-600 mb-2 tracking-widest">現在與未來 - 環狀連結</h4>
+                    <p class="text-slate-700">近年「環狀線」的加入，更是一個重要的里程碑——它代表著台北捷運從早期的「輻射狀」（所有路徑都往中心擠）轉向「環狀連結」，讓雙北通勤族終於不用再事事都得經由台北車站「朝聖」。</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Section 3 - Visual List -->
+        <article class="mb-24">
+            <div class="flex items-baseline gap-4 mb-10">
+                <span class="text-6xl font-accent font-extrabold text-ghibli-grass/20">03</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-ghibli-deepBlue">北捷這四大「隱形神功」</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="group flex flex-col md:flex-row gap-6 p-6 rounded-2xl hover:bg-white/50 transition-all duration-300">
+                    <div class="w-12 h-12 flex-shrink-0 bg-ghibli-mrtBlue text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">1</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-ghibli-deepBlue mb-2">潔淨如新的社會心理學</h4>
+                        <p class="text-slate-600">北捷的「禁食文化」不僅是法律規定，更演變成一種社會契約。這種高強度的清潔度，在無形中提升了市民的自律感與都市自豪感。</p>
+                    </div>
+                </div>
+                <div class="group flex flex-col md:flex-row gap-6 p-6 rounded-2xl hover:bg-white/50 transition-all duration-300">
+                    <div class="w-12 h-12 flex-shrink-0 bg-ghibli-mrtBlue text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">2</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-ghibli-deepBlue mb-2">精準到像時鐘</h4>
+                        <p class="text-slate-600">北捷的系統可靠度（MKBF）在國際間名列前茅。對於分秒必爭的通勤族來說，這種「穩定度」就是一種安全感。</p>
+                    </div>
+                </div>
+                <div class="group flex flex-col md:flex-row gap-6 p-6 rounded-2xl hover:bg-white/50 transition-all duration-300">
+                    <div class="w-12 h-12 flex-shrink-0 bg-ghibli-mrtBlue text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">3</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-ghibli-deepBlue mb-2">細節控的溫柔</h4>
+                        <p class="text-slate-600">夜間婦女候車區、隨處可見的無障礙設施、清晰的指標系統，這些設計體現了對弱勢族群的社會關懷。</p>
+                    </div>
+                </div>
+                <div class="group flex flex-col md:flex-row gap-6 p-6 rounded-2xl hover:bg-white/50 transition-all duration-300">
+                    <div class="w-12 h-12 flex-shrink-0 bg-ghibli-mrtBlue text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">4</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-ghibli-deepBlue mb-2">佛心票價的背後</h4>
+                        <p class="text-slate-600">搭配「1200 定期票」（TPASS），北捷的票價簡直是社會福利等級，極大地降低了低收入者的移動成本。</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Section 4 - Challenges (Neobrutalism influence) -->
+        <article class="mb-24 p-8 bg-slate-900 text-slate-100 rounded-[2rem] shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10">
+                <div class="flex items-baseline gap-4 mb-8">
+                    <span class="text-6xl font-accent font-extrabold text-white/10">04</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">捷運崩潰點：完美的背後</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="border-t border-slate-700 pt-6">
+                        <span class="text-red-400 font-bold block mb-2 uppercase tracking-widest text-xs">Sustainability</span>
+                        <h5 class="text-lg font-bold mb-3">財務永續性</h5>
+                        <p class="text-sm text-slate-400">票務收入長期虧損，必須靠廣告、店鋪租金甚至土地開發來苦撐，設施老化也是巨大挑戰。</p>
+                    </div>
+                    <div class="border-t border-slate-700 pt-6">
+                        <span class="text-red-400 font-bold block mb-2 uppercase tracking-widest text-xs">Connectivity</span>
+                        <h5 class="text-lg font-bold mb-3">體感距離落差</h5>
+                        <p class="text-sm text-slate-400">板橋站或新埔民生站的長距離轉乘，讓乘客感覺像是參加田徑馬拉松。</p>
+                    </div>
+                    <div class="border-t border-slate-700 pt-6">
+                        <span class="text-red-400 font-bold block mb-2 uppercase tracking-widest text-xs">Experience</span>
+                        <h5 class="text-lg font-bold mb-3">沙丁魚尖峰</h5>
+                        <p class="text-sm text-slate-400">文湖線的小車廂與板南線的恐怖人潮，反映出路網在面對極端需求時的脆弱。</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Section 5 - Future Vision -->
+        <article class="mb-24">
+            <div class="flex items-baseline gap-4 mb-10">
+                <span class="text-6xl font-accent font-extrabold text-ghibli-sky/40">05</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-ghibli-deepBlue">接下來的捷運更進化！</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-ghibli-cloud p-8 rounded-3xl border-2 border-ghibli-sky/30 shadow-inner group hover:bg-white transition-colors duration-500">
+                    <div class="mb-4 text-3xl">🚇</div>
+                    <h4 class="text-xl font-bold text-ghibli-deepBlue mb-2">環狀線「究極體」</h4>
+                    <p class="text-slate-600">未來的環狀線將徹底串連雙北衛星城市，實現真正的點對點神速連結。</p>
+                </div>
+                <div class="bg-ghibli-cloud p-8 rounded-3xl border-2 border-ghibli-sky/30 shadow-inner group hover:bg-white transition-colors duration-500">
+                    <div class="mb-4 text-3xl">🏗️</div>
+                    <h4 class="text-xl font-bold text-ghibli-deepBlue mb-2">萬大線預備起</h4>
+                    <p class="text-slate-600">預計 2027 年通車的第一期，將填補目前萬大、中永和與土城的運輸空白區。</p>
+                </div>
+                <div class="bg-ghibli-cloud p-8 rounded-3xl border-2 border-ghibli-sky/30 shadow-inner group hover:bg-white transition-colors duration-500">
+                    <div class="mb-4 text-3xl">📱</div>
+                    <h4 class="text-xl font-bold text-ghibli-deepBlue mb-2">無感支付新時代</h4>
+                    <p class="text-slate-600">手機感應或信用卡直接過閘將成為日常，與國際觀光接軌。</p>
+                </div>
+                <div class="bg-ghibli-cloud p-8 rounded-3xl border-2 border-ghibli-sky/30 shadow-inner group hover:bg-white transition-colors duration-500">
+                    <div class="mb-4 text-3xl">🤖</div>
+                    <h4 class="text-xl font-bold text-ghibli-deepBlue mb-2">AI 領航</h4>
+                    <p class="text-slate-600">GoA4 級別自動駕駛與大數據監測，捷運將能根據人潮即時調整班次。</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Final Summary -->
+        <section class="mb-32 text-center">
+            <div class="max-w-2xl mx-auto py-12 px-8 bg-ghibli-sky/10 rounded-full border-2 border-dashed border-ghibli-sky/40">
+                <p class="text-2xl font-display text-ghibli-deepBlue leading-relaxed">
+                    從 1996 年的第一台小車廂，到未來 AI 驅動的自動化網絡，台北捷運不只是鐵軌與電線，它是這座城市共同生長的記憶，也是我們通往更好生活質量的軌道。
+                </p>
+                <div class="mt-8 flex justify-center items-center gap-2 text-slate-500 font-accent font-bold">
+                    <span>STATION</span>
+                    <span class="w-12 h-[2px] bg-slate-300"></span>
+                    <span>FUTURE</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll Indicator (Floating Element) -->
+    <div class="fixed bottom-10 right-10 z-50">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-14 h-14 bg-ghibli-deepBlue text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('article, section > div').forEach(el => {
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
