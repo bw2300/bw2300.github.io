@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣農村發展與轉型報告 - RUBY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        earth: {
+                            50: '#fdf8f6',
+                            200: '#f1e3d9',
+                            500: '#b45309',
+                            800: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0c0e12;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0e12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Hero Header -->
+    <header class="relative pt-12 pb-20 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-brand-500 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-indigo-600 blur-[120px] rounded-full"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10 text-center">
+            <h1 class="font-display font-800 text-5xl md:text-7xl mb-6 tracking-tight">
+                台灣農村 <span class="gradient-text">發展與轉型</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                應對極端氣候與高齡社會，引領數位轉型與永續發展的韌性轉身。
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-24 pb-24">
+        
+        <!-- Top: Infographic Section -->
+        <section id="infographic" class="animate-float">
+            <div class="text-center mb-8">
+                <span class="px-4 py-1 rounded-full bg-brand-500/10 text-brand-500 text-sm font-semibold tracking-wider uppercase">Visual Overview</span>
+                <h2 class="text-3xl font-bold mt-4">關鍵摘要資訊圖表</h2>
+            </div>
+            <div class="glass-card p-2 md:p-4 overflow-hidden shadow-2xl">
+                <img src='https://opal.google/board/blobs/b43038dc-344d-4754-81b2-5640886f746d' alt='台灣農村發展關鍵重點資訊圖表' class="w-full h-auto rounded-xl" />
+            </div>
+        </section>
+
+        <!-- Summary: Bento Grid -->
+        <section id="summary">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Main Summary Card -->
+                <div class="md:col-span-2 glass-card p-8 bg-gradient-to-br from-brand-900/20 to-transparent">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <span class="w-8 h-8 flex items-center justify-center bg-brand-500 rounded-lg text-white">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </span>
+                        核心摘要
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-slate-300">
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-white">發展與挑戰</h4>
+                            <p>強化「韌性農業」以保障糧食安全，推動向生態、文化與休閒結合的「多功能性農村」轉型。</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-white">數位與智慧化</h4>
+                            <p>導入5G、AIoT與數位孿生技術，邁向數位轉型4.0，縮短城鄉落差。</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-white">地方創生</h4>
+                            <p>強調企業參與，「產地到餐桌」品牌化與「體驗經濟」結合，提升農村附加價值。</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-white">永續發展</h4>
+                            <p>配合2050淨零目標，轉變為碳匯貢獻者，推行生態系統服務給付及循環經濟。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Small Info Card -->
+                <div class="glass-card p-8 flex flex-col justify-center items-center text-center space-y-4 border-indigo-500/30">
+                    <div class="w-16 h-16 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">人口結構</h4>
+                    <p class="text-sm text-slate-400">面對2025超高齡社會，「數位原住民」青農返鄉成為關鍵，建立青銀共生機制。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Middle: Video & Audio Section -->
+        <section id="media-showcase" class="relative">
+            <div class="text-center mb-12">
+                <span class="px-4 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-sm font-semibold tracking-wider uppercase">Visual & Audio Experience</span>
+                <h2 class="text-3xl font-bold mt-4">數位轉型影音實錄</h2>
+            </div>
+            
+            <div class="flex flex-col items-center space-y-8">
+                <!-- Video Container -->
+                <div class="w-full max-w-4xl glass-card p-3 shadow-[0_0_50px_-12px_rgba(56,189,248,0.3)]">
+                    <div class="aspect-video bg-black rounded-xl overflow-hidden relative">
+                        <video src='https://opal.google/board/blobs/36480b0b-ccc6-46dd-8d01-b4eb48e4d78f' class="w-full h-full object-cover" controls preload="metadata"></video>
+                    </div>
+                </div>
+
+                <!-- Audio Container -->
+                <div class="w-full max-w-2xl glass-card p-6 flex flex-col md:flex-row items-center gap-6">
+                    <div class="w-16 h-16 flex-shrink-0 bg-brand-500/20 rounded-full flex items-center justify-center animate-pulse-slow">
+                        <svg class="w-8 h-8 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.692-3.692a1 1 0 011.107-.232zM14.854 8.146a.5.5 0 010 .708 1.5 1.5 0 000 2.122.5.5 0 11-.708.708 2.5 2.5 0 010-3.536.5.5 0 01.708 0zm3.535-1.414a.5.5 0 010 .708 3.5 3.5 0 000 4.95.5.5 0 01-.707.707 4.5 4.5 0 010-6.364.5.5 0 01.707 0z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <div class="flex-grow w-full">
+                        <p class="text-sm font-semibold mb-2 text-slate-400 text-center md:text-left">背景音樂：農村轉型律動</p>
+                        <audio src='https://opal.google/board/blobs/7b7636b2-8a1a-4c08-a97f-dc1479ccf552' class="w-full h-10 accent-brand-500" controls></audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom: Report Content -->
+        <section id="full-report" class="space-y-16">
+            <div class="text-center mb-16">
+                <span class="px-4 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-semibold tracking-wider uppercase">In-depth Analysis</span>
+                <h2 class="text-3xl font-bold mt-4">專題探索報告全文</h2>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Content Area -->
+                <div class="lg:col-span-8 space-y-12">
+                    <!-- Chapter 1 -->
+                    <article class="group">
+                        <div class="flex items-start gap-4">
+                            <span class="text-6xl font-black text-white/5 group-hover:text-brand-500/20 transition-colors duration-500 font-display">01</span>
+                            <div class="pt-4">
+                                <h3 class="text-2xl font-bold text-white mb-4 border-l-4 border-brand-500 pl-4">全球與台灣農村發展的現狀與挑戰</h3>
+                                <p class="text-slate-400 leading-loose text-justify">
+                                    當前台灣農村正處於內部結構轉型與外部風險（如氣候變遷與地緣政治影響糧食供應鏈）交界的關鍵期。為應對日益頻繁的極端天氣 (Extreme weather)，農政單位積極推動韌性農業 (Resilience agriculture)，著重於強化農村基礎設施及建立多元產銷通路，以確保糧食安全 (Food security)。從全球視角觀察，農村發展已由單一的農業生產模式轉變為多功能性農村 (Multifunctional rural area)，這是一個整合生態服務 (Ecological services)、文化休閒與居住功能的綜合空間。
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Chapter 2 -->
+                    <article class="group">
+                        <div class="flex items-start gap-4">
+                            <span class="text-6xl font-black text-white/5 group-hover:text-brand-500/20 transition-colors duration-500 font-display">02</span>
+                            <div class="pt-4">
+                                <h3 class="text-2xl font-bold text-white mb-4 border-l-4 border-indigo-500 pl-4">智慧農業與數位轉型在農村的應用</h3>
+                                <p class="text-slate-400 leading-loose text-justify">
+                                    為提升生產效率，農村正積極邁向農業數位轉型 4.0 (Agricultural digital transformation 4.0)。透過導入數位孿生 (Digital twin)、人工智慧物聯網 (Artificial Intelligence of Things, AIoT)、5G 基礎設施及低軌衛星通訊，農村得以實現精準灌溉與病蟲害預測等智慧農業 (Smart agriculture) 應用。此外，為解決城鄉落差與最後一哩路的配送問題，台灣擴大推廣數位農遊 (Digital rural tourism) 與智慧物流 (Smart logistics)，並利用數位平台提升小農的市場議議價能力。
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Chapter 3 -->
+                    <article class="group">
+                        <div class="flex items-start gap-4">
+                            <span class="text-6xl font-black text-white/5 group-hover:text-brand-500/20 transition-colors duration-500 font-display">03</span>
+                            <div class="pt-4">
+                                <h3 class="text-2xl font-bold text-white mb-4 border-l-4 border-emerald-500 pl-4">農村創生與品牌經營</h3>
+                                <p class="text-slate-400 leading-loose text-justify">
+                                    在地方創生 2.0 (Regional revitalization 2.0) 的政策推動下，農村經濟正逐漸擺脫對政府補助的單一依賴，轉向強調企業參與及民間投資。成功的農村創生策略包含建立產地到餐桌 (Farm-to-Table) 的品牌化經營，並透過體驗經濟 (Experience economy) 吸引都市人口進入農村。結合現代設計思維與地方文化資產（如古道與傳統工藝），成為大幅提升農村附加價值與推動經濟再造的核心關鍵。
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Chapter 4 -->
+                    <article class="group">
+                        <div class="flex items-start gap-4">
+                            <span class="text-6xl font-black text-white/5 group-hover:text-brand-500/20 transition-colors duration-500 font-display">04</span>
+                            <div class="pt-4">
+                                <h3 class="text-2xl font-bold text-white mb-4 border-l-4 border-amber-500 pl-4">農村人口結構變化：高齡化與青農返鄉</h3>
+                                <p class="text-slate-400 leading-loose text-justify">
+                                    台灣預計於 2025 年正式邁入超高齡社會 (Hyper-aging society)，農村勞動力短缺成為最急迫的挑戰。然而，具備數位原住民 (Digital natives) 特質的青農返鄉 (Returning young farmers)，不僅為農村注入新技術，也重塑了農村的社交結構。針對土地取得困難與金融信貸門檻等返鄉障礙，政策建議應建立「銀髮農民技術傳承」與「青農創新實驗」的共生機制，以有效填補高齡化帶來的勞動力缺口。
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Chapter 5 -->
+                    <article class="group">
+                        <div class="flex items-start gap-4">
+                            <span class="text-6xl font-black text-white/5 group-hover:text-brand-500/20 transition-colors duration-500 font-display">05</span>
+                            <div class="pt-4">
+                                <h3 class="text-2xl font-bold text-white mb-4 border-l-4 border-teal-500 pl-4">永續發展與農村生態保護</h3>
+                                <p class="text-slate-400 leading-loose text-justify">
+                                    因應全球永續發展目標 (Sustainable Development Goals, SDGs) 與 2050 年淨零排放 (Net-zero emissions) 願景，農村正轉變為重要的碳匯貢獻者。農業部門積極推動包含森林、草地及土壤在內的農業碳匯 (Agricultural carbon sinks) 技術。同時，政策端開始探討生態系統服務給付 (Payment for Ecosystem Services, PES) 機制，提供誘因給保護環境的農民。此外，推動農業廢棄物資材化等循環經濟 (Circular economy) 模式，已成為現代永續農村發展的關鍵指標。
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Right Sidebar: References -->
+                <aside class="lg:col-span-4 space-y-8">
+                    <div class="glass-card p-6 border-brand-500/20 sticky top-8">
+                        <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            引用文獻來源
+                        </h4>
+                        <ol class="space-y-3 text-xs text-slate-400 list-decimal list-inside leading-relaxed">
+                            <li>中華經濟研究院 (CIER) (2023)。《2023 農業政策經濟分析年度報告》。</li>
+                            <li>OECD (2023). Rural Policy Review 2023: Changing Rural Economies.</li>
+                            <li>農業部農業試驗所 (TARI) (2024)。《2024 智慧農業技術創新白皮書》。</li>
+                            <li>MDPI Sustainability (2023). "Digital Transformation in Rural Areas: A Systematic Review (2023)".</li>
+                            <li>國家發展委員會 (NDC) (2024)。《地方創生推動現狀報告 (2023-2024)》。</li>
+                            <li>《人文與社會科學簡訊》 (2023)。第25卷第1期。</li>
+                            <li>農業部農村發展及水土保持署 (2023)。《2023 農村人力資源調查統計》。</li>
+                            <li>Journal of Rural Studies (2024). "Generational Renewal in Agriculture: International Perspectives (2024)".</li>
+                            <li>臺灣經濟研究院 (2023)。《2023 淨零趨勢下農業綠色金融研究》。</li>
+                            <li>United Nations (UN) (2023). The Sustainable Development Goals Report 2023: Rural Focus.</li>
+                        </ol>
+                    </div>
+
+                    <!-- Conclusion Box -->
+                    <div class="glass-card p-6 bg-brand-500/10 border-brand-500/40">
+                        <h4 class="text-lg font-bold mb-3 text-white">簡要結論</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            台灣農村正面臨轉型升級的歷史節點，必須透過「韌性農業」與「數位轉型」提升生產效能；並藉由「地方創生」與「青銀共生」重塑社會結構，蛻變為兼顧經濟價值、生態保護與文化傳承的多功能韌性空間。
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Footer Decoration -->
+        <div class="section-divider"></div>
+
+        <!-- Student Info Center -->
+        <div class="flex flex-col items-center py-12 space-y-4">
+            <div class="flex flex-col items-center">
+                <span class="text-slate-500 text-sm uppercase tracking-widest mb-1">Author Information</span>
+                <div class="text-2xl font-display">
+                    【主題探索報告】by <span class="italic text-red-500 font-bold">RUBY</span>
+                </div>
+            </div>
+            <div class="px-6 py-2 rounded-full border border-white/10 bg-white/5 text-slate-400 font-mono text-sm">
+                ID: M11408904
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Subtle Scroll-to-top (Functional) -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 w-12 h-12 rounded-full glass-card flex items-center justify-center text-brand-500 hover:bg-brand-500 hover:text-white transition-all duration-300 shadow-lg z-50 group">
+        <svg class="w-6 h-6 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+</body>
+</html>
